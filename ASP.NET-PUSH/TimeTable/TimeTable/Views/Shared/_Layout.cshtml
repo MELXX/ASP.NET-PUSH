@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link asp-href-include="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <title>@ViewData["Title"] - Sixth Sense</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="navbar navbar-expand-md bg-info navbar-light">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                <img src="~/images/Logo.png"
+                     alt="SIXTH SENSE" style="width: 100px" />
+            </a>
+
+            <!-- Toggler/collapsible Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#MyNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="MyNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">My Timetable</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Contact">My Chats</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Assessments</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" asp-controller="Assessment"
+                               asp-action="Create">Create Assessment</a>
+                            <a class="dropdown-item" asp-controller="Assessment"
+                               asp-action="Edit">Edit Assessment</a>
+                            <a class="dropdown-item" asp-controller="Assessment"
+                               asp-action="Delete">Delete Assessment</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="About">Help</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="pb-3">
+            @RenderBody()
+        </div>
+    </div>
+
+    <div class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2019 - Sixth Sense 
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script asp-src-include="lib/jquery/jquery.slim.min.js"></script>
+
+    <script asp-src-include="lib/popper.js/popper.min.js"></script>
+
+    <script asp-src-include="lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

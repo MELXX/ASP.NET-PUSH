@@ -1,0 +1,92 @@
+﻿<h3 style="text-align:center"> THREE-DAY VIEW</h3>
+<div class="table">
+    <table align="center" border="1">
+        <thead>
+            @if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
+            {
+                <tr>
+                    <th>
+                        @DayOfWeek.Monday.ToString()
+                    </th>
+                    <th>
+                        @DayOfWeek.Tuesday.ToString()
+                    </th>
+                    <th>
+                        @DayOfWeek.Wednesday.ToString()
+                    </th>
+                </tr>
+            }
+            @if (DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
+            {
+                <tr>
+                    <th>
+                        @DayOfWeek.Tuesday.ToString()
+                    </th>
+                    <th>
+                        @DayOfWeek.Wednesday.ToString()
+                    </th>
+                    <th>
+                        @DayOfWeek.Thursday.ToString()
+                    </th>
+                </tr>
+            }
+            @if (DateTime.Now.DayOfWeek == DayOfWeek.Wednesday)
+            {
+                <tr>
+                    <th>
+                        @DayOfWeek.Wednesday.ToString()
+                    </th>
+                    <th>
+                        @DayOfWeek.Thursday.ToString()
+                    </th>
+                    <th>
+                        @DayOfWeek.Friday.ToString()
+                    </th>
+                </tr>
+            }
+            @if (DateTime.Now.DayOfWeek == DayOfWeek.Thursday)
+            {
+                <tr>
+                    <th>
+                        @DayOfWeek.Thursday.ToString()
+                    </th>
+                    <th>
+                        @DayOfWeek.Friday.ToString()
+                    </th>
+                    <th>
+                        @DayOfWeek.Saturday.ToString()
+                    </th>
+                </tr>
+            }
+            @if (DateTime.Now.DayOfWeek == DayOfWeek.Friday)
+            {
+                <tr>
+                    <th>
+                        @DayOfWeek.Friday.ToString()
+                    </th>
+                    <th>
+                        @DayOfWeek.Saturday.ToString()
+                    </th>
+                    <th>
+                        @DayOfWeek.Monday.ToString()
+                    </th>
+                </tr>
+            }
+            @if (DateTime.Now.DayOfWeek == DayOfWeek.Saturday)
+            {
+                <tr>
+                    <th>
+                        @DayOfWeek.Saturday.ToString()
+                    </th>
+                    <th>
+                        @DayOfWeek.Monday.ToString()
+                    </th>
+                    <th>
+                        @DayOfWeek.Tuesday.ToString()
+                    </th>
+                </tr>
+            }
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>

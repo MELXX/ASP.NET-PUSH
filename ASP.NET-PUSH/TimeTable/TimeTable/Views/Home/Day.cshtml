@@ -1,0 +1,28 @@
+﻿@model IEnumerable<TimeTable.Models.Entities.Course>
+@{
+    ViewData["Title"] = "My Timetable";
+}
+
+<h2 style="text-align: center">MY TIMETABLE</h2>
+<br/>
+
+<a class="btn btn-primary align-bottom" style="float:right" asp-action="Index"
+   asp-controller="Home">Next View</a>
+
+<br/>
+
+@foreach (var item in Model)
+{
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@item.Title</h4>
+            <h6 class="card-subtitle mb-2 text-muted">@item.Title</h6>
+            <p class="card-text">
+                Some quick example text to build on the card title
+                and make up the bulk of the card's content.
+            </p>
+            <a href="#!" class="card-link">Card link</a>
+            <a href="#!" class="card-link">Another link</a>
+        </div>
+    </div>
+}
